@@ -1,0 +1,91 @@
+﻿<Window x:Class="Animation_of_Button.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Animation_of_Button"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Canvas>
+            <Button Opacity="1.0" Content="B" FontSize="45" FontWeight="ExtraBlack" Background="DeepSkyBlue" Foreground="White" Height="85" Width="240" HorizontalAlignment="Left" Name="buttonAnimate1" VerticalAlignment="Top" Canvas.Left="-242" Canvas.Top="68" RenderTransformOrigin="0.42,0.51">
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+
+                                <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)" From="-520" To="100" Duration="0:0:5" AutoReverse="False" />
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="Window.MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+
+                                <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)" From="100" To="-520" Duration="0:0:1" AutoReverse="False" />
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                </Button.Triggers>
+            </Button>
+
+            <Button Opacity="1.0" Content="G" FontSize="45" FontWeight="ExtraBlack" Background="SpringGreen" Foreground="White" Height="85" Width="240" HorizontalAlignment="Left" Name="buttonAnimate2" VerticalAlignment="Top" Canvas.Right="-250" Canvas.Top="68" RenderTransformOrigin="0.42,0.51">
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+
+                                <DoubleAnimation Storyboard.TargetProperty="(Canvas.Right)" From="-520" To="100" Duration="0:0:5" AutoReverse="False" />
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="Window.MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+
+                                <DoubleAnimation Storyboard.TargetProperty="(Canvas.Right)" From="100" To="-520" Duration="0:0:1" AutoReverse="False" />
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                </Button.Triggers>
+            </Button>
+
+            <Button Opacity="1.0" Content="R" FontSize="45" FontWeight="ExtraBlack" Background="Red" Foreground="White" Height="85" Width="240" HorizontalAlignment="Left" Name="buttonAnimate3" VerticalAlignment="Top" Canvas.Right="-250" Canvas.Bottom="43" RenderTransformOrigin="0.42,0.51" Canvas.Left="299">
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+
+                                <DoubleAnimation Storyboard.TargetProperty="(Canvas.Bottom)" From="-520" To="50" Duration="0:0:5" AutoReverse="False" />
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="Window.MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+
+                                <DoubleAnimation Storyboard.TargetProperty="(Canvas.Bottom)" From="50" To="-520" Duration="0:0:1" AutoReverse="False" />
+
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                </Button.Triggers>
+            </Button>
+
+        </Canvas>
+
+    </Grid>
+
+</Window>
